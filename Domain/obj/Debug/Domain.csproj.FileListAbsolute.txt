@@ -1,0 +1,10 @@
+C:\RedSocial\RedSocial\Domain\bin\Debug\Domain.dll
+C:\RedSocial\RedSocial\Domain\bin\Debug\Domain.pdb
+C:\RedSocial\RedSocial\Domain\bin\Debug\Data.dll
+C:\RedSocial\RedSocial\Domain\bin\Debug\Entidades.dll
+C:\RedSocial\RedSocial\Domain\bin\Debug\Data.pdb
+C:\RedSocial\RedSocial\Domain\bin\Debug\Entidades.pdb
+C:\RedSocial\RedSocial\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\RedSocial\RedSocial\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\RedSocial\RedSocial\Domain\obj\Debug\Domain.dll
+C:\RedSocial\RedSocial\Domain\obj\Debug\Domain.pdb

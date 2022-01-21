@@ -1,0 +1,8 @@
+C:\RedSocial\RedSocial\Data\bin\Debug\Data.dll
+C:\RedSocial\RedSocial\Data\bin\Debug\Data.pdb
+C:\RedSocial\RedSocial\Data\bin\Debug\Entidades.dll
+C:\RedSocial\RedSocial\Data\bin\Debug\Entidades.pdb
+C:\RedSocial\RedSocial\Data\obj\Debug\Data.csprojAssemblyReference.cache
+C:\RedSocial\RedSocial\Data\obj\Debug\Data.csproj.CopyComplete
+C:\RedSocial\RedSocial\Data\obj\Debug\Data.dll
+C:\RedSocial\RedSocial\Data\obj\Debug\Data.pdb

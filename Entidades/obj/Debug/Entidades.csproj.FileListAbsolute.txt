@@ -1,0 +1,4 @@
+C:\RedSocial\RedSocial\Entidades\bin\Debug\Entidades.dll
+C:\RedSocial\RedSocial\Entidades\bin\Debug\Entidades.pdb
+C:\RedSocial\RedSocial\Entidades\obj\Debug\Entidades.dll
+C:\RedSocial\RedSocial\Entidades\obj\Debug\Entidades.pdb

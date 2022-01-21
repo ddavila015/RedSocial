@@ -1,24 +1,883 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿html {
+    min-height: 100%;
 }
 
-/* Set padding to keep content from hitting the edges */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/bg.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.action {
+    z-index: 1000;
+    background: #FF252D;
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 10%);
+}
+
+    .action span {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        font-size: 2rem;
+        transition: 0.3s ease-in-out;
+    }
+
+    .action.active span {
+        transform: rotate(100deg);
+    }
+
+    .action ul {
+        position: absolute;
+        bottom: 55px;
+        right: 45px;
+        background: #343a40;
+        min-width: 250px;
+        padding: 20px;
+        border-radius: 0.25rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        padding: 1rem;
+        list-style: none !important;
+        border: 2px solid #6a7682;
+    }
+
+    .action.active ul {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s;
+    }
+
+.border {
+    border: 2px solid #ddd !important;
+}
+
+.legend-per {
+    width: initial !important;
+    padding: 5px !important;
+    font-size: 1rem;
+    margin-bottom: initial !important;
+    font-weight: bold;
+}
+
+.navbar-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.175) !important;
+}
+
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.175) !important;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.home {
+    transition: transform .2s;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+    .home:hover {
+        transform: scale(1.1);
+    }
+ 
+
+    .btn-success:hover {
+        background-color: #56606b !important;
+        border-color: #56606b !important;
+    }
+
+.btn-disabled, .btn-disabled:hover {
+    cursor: not-allowed !important;
+    color: #fff;
+    background-color: #AFAFAF !important;
+    border-color: #AFAFAF !important;
 }
+
+.btn-primary {
+    color: #fff;
+    background-color: #124069 !important;
+    border-color: #124069 !important;
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #5897fb !important;
+        border-color: #5897fb !important;
+    }
+
+    .btn-primary:focus, .btn-primary.focus {
+        box-shadow: 0 0 0 0.2rem rgba(25, 85, 135, 0.5);
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+    .show > .btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #194B7D;
+        border-color: #194B7D;
+    }
+
+        .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-primary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(25, 85, 135, 0.5);
+        }
+
+.bg-primary {
+    background-color: #124069 !important;
+    color: #fff;
+}
+
+a.bg-primary:hover, a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+    background-color: #0062cc !important;
+}
+
+.error {
+    color: #5a5c69;
+    font-size: 6rem;
+    position: relative;
+    line-height: 1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@-webkit-keyframes noise-anim {
+    0% {
+        clip: rect(22px, 9999px, 88px, 0);
+    }
+
+    5% {
+        clip: rect(25px, 9999px, 10px, 0);
+    }
+
+    10% {
+        clip: rect(1px, 9999px, 45px, 0);
+    }
+
+    15% {
+        clip: rect(78px, 9999px, 73px, 0);
+    }
+
+    20% {
+        clip: rect(31px, 9999px, 22px, 0);
+    }
+
+    25% {
+        clip: rect(22px, 9999px, 79px, 0);
+    }
+
+    30% {
+        clip: rect(94px, 9999px, 52px, 0);
+    }
+
+    35% {
+        clip: rect(70px, 9999px, 11px, 0);
+    }
+
+    40% {
+        clip: rect(9px, 9999px, 54px, 0);
+    }
+
+    45% {
+        clip: rect(92px, 9999px, 59px, 0);
+    }
+
+    50% {
+        clip: rect(49px, 9999px, 80px, 0);
+    }
+
+    55% {
+        clip: rect(29px, 9999px, 22px, 0);
+    }
+
+    60% {
+        clip: rect(60px, 9999px, 21px, 0);
+    }
+
+    65% {
+        clip: rect(69px, 9999px, 57px, 0);
+    }
+
+    70% {
+        clip: rect(23px, 9999px, 85px, 0);
+    }
+
+    75% {
+        clip: rect(69px, 9999px, 30px, 0);
+    }
+
+    80% {
+        clip: rect(8px, 9999px, 47px, 0);
+    }
+
+    85% {
+        clip: rect(34px, 9999px, 19px, 0);
+    }
+
+    90% {
+        clip: rect(96px, 9999px, 28px, 0);
+    }
+
+    95% {
+        clip: rect(13px, 9999px, 31px, 0);
+    }
+
+    100% {
+        clip: rect(34px, 9999px, 9px, 0);
+    }
+}
+
+@keyframes noise-anim {
+    0% {
+        clip: rect(22px, 9999px, 88px, 0);
+    }
+
+    5% {
+        clip: rect(25px, 9999px, 10px, 0);
+    }
+
+    10% {
+        clip: rect(1px, 9999px, 45px, 0);
+    }
+
+    15% {
+        clip: rect(78px, 9999px, 73px, 0);
+    }
+
+    20% {
+        clip: rect(31px, 9999px, 22px, 0);
+    }
+
+    25% {
+        clip: rect(22px, 9999px, 79px, 0);
+    }
+
+    30% {
+        clip: rect(94px, 9999px, 52px, 0);
+    }
+
+    35% {
+        clip: rect(70px, 9999px, 11px, 0);
+    }
+
+    40% {
+        clip: rect(9px, 9999px, 54px, 0);
+    }
+
+    45% {
+        clip: rect(92px, 9999px, 59px, 0);
+    }
+
+    50% {
+        clip: rect(49px, 9999px, 80px, 0);
+    }
+
+    55% {
+        clip: rect(29px, 9999px, 22px, 0);
+    }
+
+    60% {
+        clip: rect(60px, 9999px, 21px, 0);
+    }
+
+    65% {
+        clip: rect(69px, 9999px, 57px, 0);
+    }
+
+    70% {
+        clip: rect(23px, 9999px, 85px, 0);
+    }
+
+    75% {
+        clip: rect(69px, 9999px, 30px, 0);
+    }
+
+    80% {
+        clip: rect(8px, 9999px, 47px, 0);
+    }
+
+    85% {
+        clip: rect(34px, 9999px, 19px, 0);
+    }
+
+    90% {
+        clip: rect(96px, 9999px, 28px, 0);
+    }
+
+    95% {
+        clip: rect(13px, 9999px, 31px, 0);
+    }
+
+    100% {
+        clip: rect(34px, 9999px, 9px, 0);
+    }
+}
+
+.error:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 #e74a3b;
+    top: 0;
+    color: #5a5c69;
+    background: #f8f9fc;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes noise-anim-2 {
+    0% {
+        clip: rect(34px, 9999px, 67px, 0);
+    }
+
+    5% {
+        clip: rect(97px, 9999px, 95px, 0);
+    }
+
+    10% {
+        clip: rect(59px, 9999px, 57px, 0);
+    }
+
+    15% {
+        clip: rect(44px, 9999px, 73px, 0);
+    }
+
+    20% {
+        clip: rect(23px, 9999px, 16px, 0);
+    }
+
+    25% {
+        clip: rect(46px, 9999px, 58px, 0);
+    }
+
+    30% {
+        clip: rect(53px, 9999px, 49px, 0);
+    }
+
+    35% {
+        clip: rect(54px, 9999px, 42px, 0);
+    }
+
+    40% {
+        clip: rect(92px, 9999px, 10px, 0);
+    }
+
+    45% {
+        clip: rect(89px, 9999px, 15px, 0);
+    }
+
+    50% {
+        clip: rect(52px, 9999px, 9px, 0);
+    }
+
+    55% {
+        clip: rect(20px, 9999px, 12px, 0);
+    }
+
+    60% {
+        clip: rect(89px, 9999px, 69px, 0);
+    }
+
+    65% {
+        clip: rect(6px, 9999px, 31px, 0);
+    }
+
+    70% {
+        clip: rect(9px, 9999px, 47px, 0);
+    }
+
+    75% {
+        clip: rect(72px, 9999px, 95px, 0);
+    }
+
+    80% {
+        clip: rect(45px, 9999px, 34px, 0);
+    }
+
+    85% {
+        clip: rect(6px, 9999px, 44px, 0);
+    }
+
+    90% {
+        clip: rect(94px, 9999px, 92px, 0);
+    }
+
+    95% {
+        clip: rect(81px, 9999px, 56px, 0);
+    }
+
+    100% {
+        clip: rect(58px, 9999px, 61px, 0);
+    }
+}
+
+@keyframes noise-anim-2 {
+    0% {
+        clip: rect(34px, 9999px, 67px, 0);
+    }
+
+    5% {
+        clip: rect(97px, 9999px, 95px, 0);
+    }
+
+    10% {
+        clip: rect(59px, 9999px, 57px, 0);
+    }
+
+    15% {
+        clip: rect(44px, 9999px, 73px, 0);
+    }
+
+    20% {
+        clip: rect(23px, 9999px, 16px, 0);
+    }
+
+    25% {
+        clip: rect(46px, 9999px, 58px, 0);
+    }
+
+    30% {
+        clip: rect(53px, 9999px, 49px, 0);
+    }
+
+    35% {
+        clip: rect(54px, 9999px, 42px, 0);
+    }
+
+    40% {
+        clip: rect(92px, 9999px, 10px, 0);
+    }
+
+    45% {
+        clip: rect(89px, 9999px, 15px, 0);
+    }
+
+    50% {
+        clip: rect(52px, 9999px, 9px, 0);
+    }
+
+    55% {
+        clip: rect(20px, 9999px, 12px, 0);
+    }
+
+    60% {
+        clip: rect(89px, 9999px, 69px, 0);
+    }
+
+    65% {
+        clip: rect(6px, 9999px, 31px, 0);
+    }
+
+    70% {
+        clip: rect(9px, 9999px, 47px, 0);
+    }
+
+    75% {
+        clip: rect(72px, 9999px, 95px, 0);
+    }
+
+    80% {
+        clip: rect(45px, 9999px, 34px, 0);
+    }
+
+    85% {
+        clip: rect(6px, 9999px, 44px, 0);
+    }
+
+    90% {
+        clip: rect(94px, 9999px, 92px, 0);
+    }
+
+    95% {
+        clip: rect(81px, 9999px, 56px, 0);
+    }
+
+    100% {
+        clip: rect(58px, 9999px, 61px, 0);
+    }
+}
+
+.error:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 #4e73df;
+    top: 0;
+    color: #5a5c69;
+    background: #f8f9fc;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+    .form-label-group input {
+        --input-padding-x: 1rem;
+        --input-padding-y: .75rem;
+        height: auto;
+    }
+
+    .form-label-group > input,
+    .form-label-group > label {
+        padding: var(--input-padding-y) var(--input-padding-x);
+    }
+
+    .form-label-group > label {
+        --input-padding-x: 1rem;
+        --input-padding-y: .75rem;
+        position: absolute;
+        top: 0;
+        left: 5px;
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+        /* Override default '<label>' margin */
+        line-height: 1.5;
+        color: #495057;
+        border: 1px solid transparent;
+        transition: all .1s ease-in-out;
+    }
+
+    .form-label-group input::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    .form-label-group input:-ms-input-placeholder {
+        color: transparent;
+    }
+
+    .form-label-group input::-ms-input-placeholder {
+        color: transparent;
+    }
+
+    .form-label-group input::-moz-placeholder {
+        color: transparent;
+    }
+
+    .form-label-group input::placeholder {
+        color: transparent;
+    }
+
+    .form-label-group input:not(:placeholder-shown) {
+        padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+        padding-bottom: calc(var(--input-padding-y) / 3);
+    }
+
+        .form-label-group input:not(:placeholder-shown) ~ label {
+            padding-top: calc(var(--input-padding-y) / 3);
+            padding-bottom: calc(var(--input-padding-y) / 3);
+            font-size: 12px;
+            color: #777;
+        }
+
+    .form-label-group > .select2-container .select2-selection--single {
+        height: 50px !important;
+    }
+
+        .form-label-group > .select2-container .select2-selection--single > .select2-selection__rendered {
+            line-height: 50px !important;
+        }
+
+        .form-label-group > .select2-container .select2-selection--single > .select2-selection__arrow {
+            height: 50px !important;
+        }
+
+nav > .nav.nav-tabs {
+    border: none;
+    color: #FFF;
+    background: #000;
+    border-radius: 0;
+}
+
+nav > ul li.nav-item {
+    border: none;
+    background: #124069;
+    border-radius: 0;
+}
+
+    nav > ul li.nav-item > a.nav-link {
+        color: #89A0B4;
+        border: none;
+        background: #124069;
+        border-radius: 0;
+        transition: all .3s;
+        border-bottom: 5px solid #124069;
+    }
+
+        nav > ul li.nav-item > a.nav-link:hover,
+        nav > ul li.nav-item > a.nav-link.active {
+            color: #FFF;
+            border: none;
+            background: #124069;
+            border-radius: 0;
+            border-bottom: 5px solid #89A0B4;
+        }
+
+        nav > ul li.nav-item > a.nav-link.disabled {
+            color: #6c757d;
+            border-bottom: 0px;
+            cursor: default;
+        }
+
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-focus-,
+.datepicker--cell.-selected-.-current- {
+    background: #124069;
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #CED4DA;
+}
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
+    animation: scale-up-center 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.page-link {
+    color: #FF252D;
+}
+
+th, td {
+    font-size: 12px;
+}
+
+.active {
+    color: #fff !important;
+}
+
+td.details-control {
+    background: url('DataTables/images/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+tr.shown td.details-control {
+    background: url('DataTables/images/details_close.png') no-repeat center center;
+}
+
+.nav-pills .nav-link {
+    color: #124069 !important;
+}
+
+    .nav-pills .nav-link.active {
+        color: #fff !important;
+        background-color: #124069 !important;
+    }
+
+.dt-buttons {
+    float: left;
+}
+
+.dataTables_filter {
+    padding-top: 6.5px;
+}
+
+table.dataTable.dtr-column > tbody > tr > td.control:before, table.dataTable.dtr-column > tbody > tr > th.control:before {
+    line-height: 16px;
+}
+
+/*Estilos detalle guia*/
+.tituloDireccion {
+    margin-bottom: 0.9375rem;
+}
+
+.tituloDetalle {
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.bg-border-grey {
+    border: 1px solid #dcdcdc;
+    background-color: #F7F7F7;
+    text-align: center;
+    padding: 1.875rem 0.625rem;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0px 0px 1px 1px rgba(220,220,220,0.8)inset;
+}
+
+    .tituloDetalle span, .bg-border-grey span {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+.tituloMasInfo {
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #FF252D;
+    color: #FFF;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+    padding: 0.3125rem 0rem 0.3125rem 0rem;
+    font-weight: 500;
+}
+
+.panelInfo {
+    display: block;
+    background-color: #F7F7F7;
+    border-bottom-left-radius: 0.3125rem;
+    border-bottom-right-radius: 0.3125rem;
+    border-left: 0.0625rem solid #dedede;
+    border-bottom: 0.0625rem solid #dedede;
+    border-right: 0.0625rem solid #dedede;
+}
+
+.panelInfoColDot span, .panelInfoCol span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.h2-rojo {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0.3125rem 0rem 0.3125rem 0rem;
+    text-transform: none;
+    color: #FFF;
+    background-color: #FF252D;
+    border-radius: 0.3125rem;
+}
+
+.tituloRastreoEstados {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    background-color: #afafaf;
+    border-radius: 0.3125rem;
+    margin-bottom: 0.3125rem;
+}
+
+    .tituloRastreoEstados div {
+        padding-left: 0.625rem !important;
+        padding-right: 0.625rem !important;
+        text-align: left;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 1.063rem;
+    }
+
+.rastreoEstadosInfo, .rastreoEstadosInfoNovedad {
+    background-color: #f7f7f7;
+    border: 0.0625rem solid #DCDCDC;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    font-size: 12px;
+}
+
+.rastreoEstadosInfoNovedad {
+    font-weight: 700 !important;
+}
+
+.panelInfoColDot, .panelInfoCol {
+    border-right: 0rem;
+    border-bottom: 0.125rem dotted #D5D5D5;
+    background-color: #F7F7F7;
+    text-align: center;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.panelInfoCol {
+    border-right: inherit !important;
+}
+
+.lineaSeparadora {
+    border-bottom: 0rem;
+}
+
+.ValidationHidden {
+    display: none;
+}
+
+@media only screen and (min-width: 40.063em) {
+    .panelInfoColDot, .panelInfoCol {
+        border-right: 0.125rem dotted #D5D5D5;
+        border-bottom: 0rem;
+    }
+
+    .lineaSeparadora {
+        padding-bottom: 0.9375rem;
+        border-bottom: 0.125rem dotted #D5D5D5;
+        margin-bottom: 0.9375rem;
+    }
+
+    .action {
+        bottom: 50px;
+        right: 50px;
+        width: 65px;
+        height: 65px;
+    }
+
+        .action ul {
+            right: 30px;
+        }
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+    }
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+} 
+
